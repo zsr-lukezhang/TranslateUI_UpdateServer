@@ -3,7 +3,7 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main  # Set the branch you want to deploy from
+      - main  # 设置要部署的分支
 
 jobs:
   deploy:
@@ -27,5 +27,5 @@ jobs:
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       with:
-        github_token: ${{ secrets.MY_TOKEN }}
-        publish_dir: ./TranslateUI_Update  # Adjust this to the directory with your built files
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./build  # 根据您的构建文件目录进行调整
